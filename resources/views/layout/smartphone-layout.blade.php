@@ -12,7 +12,7 @@
       <header>
         <h1>
 
-          Hello World Header
+          <a href="{{ URL::route('str.index') }}">HelloWord</a>
 
         </h1>
       </header>
