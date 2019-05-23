@@ -18,7 +18,7 @@
         @csrf
         @method('DELETE')
         <button type="submit" name="button">
-          <i class="fa fas-trash-alt"></i>
+          <i class="fas fa-trash-alt"></i>
         </button>
       </form>
 
