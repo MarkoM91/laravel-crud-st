@@ -73,7 +73,7 @@ class SmartphoneController extends Controller
     public function edit($id)
     {
       $smartphone = Smartphone::findOrFail($id);
-      return view('page.edit-car', compact('car'));
+      return view('page.edit-smartphone', compact('smartphone'));
     }
 
     /**
@@ -95,7 +95,7 @@ class SmartphoneController extends Controller
       Smartphone::whereId($id)->update($valideData);
       return redirect('str');
   }
-    }
+
 
     /**
      * Remove the specified resource from storage.
@@ -103,11 +103,11 @@ class SmartphoneController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
-    {
-      $smartphone = smartphone::findOrFail($id);
-      $smartphone->delete();
+  //  public function destroy($id)
+  //  {
+  //    $smartphone = smartphone::findOrFail($id);
+  //    $smartphone->delete();
 
-      return redirect('str');
-    }
+  //    return redirect('str');
+  //  }
 }
