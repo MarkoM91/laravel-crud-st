@@ -1,0 +1,41 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+// Variables
+@import 'variables';
+
+@import '~@fortawesome/fontawesome-free/css/all.min.css';
+
+// Bootstrap
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background: red;
+  color: white;
+  text-align: center;
+}
+
+table {
+  margin: auto;
+}
+.show {
+  text-align: center;
+}
+
+td button {
+  width: 150px;
+  height: 30px;
+  background: red;
+  color: white;
+}
+
+footer {
+  background: black;
+  color: white;
+  text-align: center;
+}
