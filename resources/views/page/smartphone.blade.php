@@ -1,11 +1,10 @@
 @extends('layout.smartphone-layout')
+
 @section('content')
-
 <div class="show">
-<h1>Smartphones</h1>
-<table border="1">
-
-  @foreach ($smartphones as $smartphone)
+  <h1>Smartphones</h1>
+  <table border="1">
+    @foreach ($smartphones as $smartphone)
 
   <tr>
     <td>{{ $smartphone -> id }}</td>
@@ -15,7 +14,7 @@
     <td>{{ $smartphone -> mem_ext }}</td>
     <td><a href="{{ route('str.edit') }}"><i class="fas fa-edit"></i></a></td>
     <td>
-      <form action="" method="post">
+      <form action="{{ route('str.destroy', $smartphone->id) }}" method="post">
         @csrf
         @method('DELETE')
         <button type="submit" name="button">
