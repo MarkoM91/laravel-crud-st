@@ -103,11 +103,11 @@ class SmartphoneController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-  //  public function destroy($id)
-  //  {
-  //    $smartphone = smartphone::findOrFail($id);
-  //    $smartphone->delete();
+     public function destroy($id)
+     {
+       $smartphone = smartphone::findOrFail($id);
+       $smartphone->delete();
 
-  //    return redirect('str');
-  //  }
+       return redirect('str');
+     }
 }
