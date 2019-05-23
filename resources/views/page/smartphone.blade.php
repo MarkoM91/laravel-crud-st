@@ -13,7 +13,7 @@
     <td>{{ $smartphone -> model }}</td>
     <td>{{ $smartphone -> display }}</td>
     <td>{{ $smartphone -> mem_ext }}</td>
-    <td><a href="#"><i class="fas fa-edit"></i></a></td>
+    <td><a href="{{ route('str.edit') }}"><i class="fas fa-edit"></i></a></td>
     <td>
       <form action="" method="post">
         @csrf

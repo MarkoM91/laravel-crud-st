@@ -72,7 +72,8 @@ class SmartphoneController extends Controller
      */
     public function edit($id)
     {
-        //
+      $smartphone = Smartphone::findOrFail($id);
+      return view('page.edit-car', compact('car'));
     }
 
     /**
@@ -84,7 +85,16 @@ class SmartphoneController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+      $valideData = $request->validate([
+        "brand" => "required",
+        "model" => "required",
+        "display" => "required|alpha_num",
+        "mem_ext" => "required|alpha_num"
+      ]);
+
+      Smartphone::whereId($id)->update($valideData);
+      return redirect('str');
+  }
     }
 
     /**
@@ -95,6 +105,9 @@ class SmartphoneController extends Controller
      */
     public function destroy($id)
     {
-        //
+      $smartphone = smartphone::findOrFail($id);
+      $smartphone->delete();
+
+      return redirect('str');
     }
 }
