@@ -26,6 +26,6 @@
   </tr>
   @endforeach
 </table>
-  <a href="{{ route('str.create')}}">Create New Smartphone</a>
+  <a href="{{ route('str.create') }}">Create New Smartphone</a>
 </div>
 @stop

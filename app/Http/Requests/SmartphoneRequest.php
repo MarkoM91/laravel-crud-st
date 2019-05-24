@@ -24,18 +24,12 @@ class SmartphoneRequest extends FormRequest
     public function rules()
     {
         return [
-            [
+
               "brand" => "required",
               "model" => "required",
               "display" => "required|alpha_num",
               "mem_ext" => "required|alpha_num"
-            ],
-            [
-              "brand" => "required",
-              "model" => "required",
-              "display" => "required|alpha_num",
-              "mem_ext" => "required|alpha_num"
-            ],
+
         ];
     }
 
